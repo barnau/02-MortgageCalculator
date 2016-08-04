@@ -42,28 +42,36 @@
 
     <div class="container main-div">
 
-      <div class="starter-template">
-        <h1>Welcome to Mortgage Calculator</h1>
-        <p class="lead">Please provide the info below and we'll calculate your mortgage payment.</p>
-      </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+          
+          <div class="starter-template">
+          <h1>Welcome to Mortgage Calculator</h1>
+          <p class="lead">Please provide the info below and we'll calculate your mortgage payment.</p>
+        </div>
 
-      <table>
-        <tr class="row">
-          <td class="col">Loan Balance</td><td class="col"><input type="text" id="loanBalanceInput"/></td>
-        </tr>
-        <tr class="row">
-          <td class="col">Interest Rate</td><td class="col"><input type="text" id="interestRateInput"/></td>
-        </tr>
-        <tr class="row">
-          <td class="col">Long Term(years)</td><td class="col"><input type="text" id="longTermInput"/></td>
-        </tr>
-        <tr class="row">
-          <td class="col">Period (monthly or bi-monthly)</td><td class="col"><select id="periodInput"><option value="12">1</option><option value="6">2</option></select></td>
-        </tr>
-      </table>
-      <button class="btn btn-primary btn-lg">Calculate</button>
-      
-      <div id="#result" class="panel panel-success">...</div>
+        <table>
+          <tr class="row">
+            <td class="col">Loan Balance</td><td class="col"><input class="form-control" type="text" id="loanBalanceInput"/></td>
+          </tr>
+          <tr class="row">
+            <td class="col">Interest Rate</td><td class="col"><input class="form-control" type="text" id="interestRateInput"/></td>
+          </tr>
+          <tr class="row">
+            <td class="col">Long Term(years)</td><td class="col"><input class="form-control" type="text" id="longTermInput"/></td>
+          </tr>
+          <tr class="row">
+            <td class="col">Period (monthly or bi-monthly)</td><td class="col"><select class="form-control" id="periodInput"><option value="12">1</option><option value="6">2</option></select></td>
+          </tr>
+        </table>
+        <button class="btn btn-primary btn-lg">Calculate</button>
+        
+        <div id="#result" class="well">...</div>
+
+      </div>
+    </div>
+
+        
       
 
     </div><!-- /.container -->

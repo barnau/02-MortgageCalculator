@@ -7,9 +7,9 @@ $("button").click(function() {
 	var longTerm = $("#longTermInput").val();
 	var period = $("#periodInput").val();
 
-	if (p <= 0 || interestRate <= 0 || longTerm <= 0 || period <= 0 ) {
+	if (p <= 0 || isNaN(p) || interestRate <= 0 || isNaN(interestRate) || longTerm <= 0 || isNaN(longTerm) || period <= 0 || isNaN(period)) {
 
-		$(".panel-success").css("background-color", "red").fadeIn().text('Please enter a positive value for all fields.');
+		$(".well").css("color", "red").fadeIn().text('Please enter a positive value for all fields.');
 		$("#loanBalanceInput").focus()
 
 	} else {
@@ -18,7 +18,7 @@ $("button").click(function() {
 		var n = longTerm * period;
 		var m = (r * Math.pow(1+r,n )) / (Math.pow(1+r,n ) - 1) * p;
 		
-		$(".panel-success").css("background-color", "green").fadeIn().text('Your monthly mortgage payment is ' + "$" +m.toFixed(2));
+		$(".well").css("color", "green").fadeIn().text('Your monthly mortgage payment is ' + "$" +m.toFixed(2));
 
 	}
 	
